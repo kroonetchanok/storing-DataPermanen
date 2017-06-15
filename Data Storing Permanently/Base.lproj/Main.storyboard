@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Data_Storing_Permanently" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What  Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxq-MQ-thA">
+                                <rect key="frame" x="91.5" y="20" width="192.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NewPhohe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95h-O8-6JS">
+                                <rect key="frame" x="86" y="129" width="203" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1h-42-ce4">
+                                <rect key="frame" x="143" y="70" width="89" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du2-QJ-Zpy">
+                                <rect key="frame" x="109" y="187" width="157" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AcJ-0D-g8a"/>
+                                    <constraint firstAttribute="width" constant="112" id="wXn-bi-mfI"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3b3-SD-4bG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O1h-42-ce4" firstAttribute="top" secondItem="Nxq-MQ-thA" secondAttribute="bottom" constant="26" id="0vX-ZJ-ZvM"/>
+                            <constraint firstItem="Du2-QJ-Zpy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5KO-DU-akn"/>
+                            <constraint firstItem="O1h-42-ce4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QgP-Dy-9Fw"/>
+                            <constraint firstItem="Nxq-MQ-thA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aFG-U4-i8r"/>
+                            <constraint firstItem="Nxq-MQ-thA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aNn-nN-gxS"/>
+                            <constraint firstItem="95h-O8-6JS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4A-Gj-CH2"/>
+                            <constraint firstItem="Du2-QJ-Zpy" firstAttribute="top" secondItem="95h-O8-6JS" secondAttribute="bottom" constant="27" id="hrT-ux-aAc"/>
+                            <constraint firstItem="95h-O8-6JS" firstAttribute="top" secondItem="O1h-42-ce4" secondAttribute="bottom" constant="36" id="nNh-zj-XLg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PhoneTextField" destination="95h-O8-6JS" id="QSZ-5r-cdN"/>
+                        <outlet property="showPhoneLabel" destination="O1h-42-ce4" id="Hfu-pD-twd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="550"/>
+        </scene>
+    </scenes>
+</document>
